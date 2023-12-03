@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofnPFO9EowajFj+2J8/6Z9Bn6U2dYIlI1I" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/forum.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://kit.fontawesome.com/ad376b065c.js" crossorigin="anonymous"></script>
+  <title>Universo IoT</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="center nav-wrapper">
+      <div class="logo">
+        <h2>Universo IoT</h2>
+      </div><!--logo-->
+
+      <div class="menu">
+        <a href="#menu">
+          Home
+        </a>
+
+        <a href="#sobre">
+          Sobre
+        </a>
+
+        <a href="#recomendacoes">
+          Recomendações
+        </a>
+
+        <a href="#forum">
+          Fórum
+        </a>
+
+        <div onclick="abrirModal()" id="login_button_modal" class="btn">
+          Login
+        </div>
+
+        <div class="user-info-header" id="userInfo">
+          <img src="user.svg" id="userImage" />
+          <p></p>
+        </div>
+      </div> <!--menu-->
+
+    </div>
+
+    <div class="menu-button open">
+      <i class="fas fa-bars"></i>
+    </div>
+    
+    <div class="menu-button close">
+      <i class="fas fa-times"></i>
+    </div>
+  </header>
+
+  <section class="main">
+
+    <div class="center">
+      <div class="main__cta">
+        <h2>Bem vindo ao<br>Universo IoT</h2>
+        <p>No universo IoT você terá acesso a vídeos , experimentos e iniciativas que
+          utilizam da internet das coisas, além de também poder
+          compartilhar suas experiências em nosso fórum.</p>
+        <a href="#sobre">Ver Mais</a>
+      </div><!--main__cta-->
+    </div>
+    </div>
+
+    </div>
+    <div class="janela-modal" id="janela-modal">
+      <div class="modal">
+        <button class="fechar" id="fechar">X</button>
+        <form id="login_form">
+          <!-- FORM HEADER -->
+          <div id="form_header">
+            <h1>Login</h1>
+            <i id="mode_icon" class="fas fa-moon"></i>
+          </div>
+
+          <!-- SOCIAL MEDIA LINKS -->
+          <div id="social_media">
+            <!-- IoT -->
+            <a href="#">
+              <img src="internet-das-coisas.png" alt="Google logo">
+            </a>
+
+            <!-- Google -->
+            <div data-js="google-login">
+              <img src="assets/imgs/google.png" alt="">
+            </div>
+          </div>
+
+          <!-- INPUTS -->
+          <div id="inputs">
+            <!-- NAME -->
+            <div class="input-box" id="nameBox">
+              <label for="name">
+                Nome
+                <div class="input-field">
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="name" name="name">
+                </div>
+              </label>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="input-box">
+              <label for="email">
+                E-mail
+                <div class="input-field">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" id="email" name="email">
+                </div>
+              </label>
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="input-box">
+              <label for="password">
+                Senha
+                <div class="input-field">
+                  <i class="fas fa-key"></i>
+                  <input type="password" id="password" name="password">
+                </div>
+              </label>
+
+              <div class="criarConta">
+                <button type="button" id="criarConta" data-type="create">
+                  Criar conta
+                </button>
+              </div>
+            </div>
+
+            <p id="errorMessageForm"></p>
+          </div>
+
+          <!-- LOGIN BUTTON -->
+          <button type="button" id="login_button">
+            Login
+          </button>
+        </form>
+
+      </div>
+  </section><!--main-->
+
+  <section class="sobre" id="sobre">
+    <div class="center">
+      <div class="chamada-sobre">
+
+        <div class="txt-animado">
+          <h2>O que é <span></span></h2>
+        </div>
+
+        <p class="sobre__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div><!--chamada-sobre-->
+      <div class="conteudo-sobre">
+        <p>O termo IoT, ou Internet das Coisas, refere-se à rede coletiva
+          de dispositivos conectados e à tecnologia que facilita a
+          comunicação entre os dispositivos e a nuvem, bem como
+          entre os próprios dispositivos. Graças ao advento de
+          chips de computador baratos e telecomunicações de alta
+          largura de banda, agora temos bilhões de dispositivos
+          conectados à Internet.
+          Como por exemplo
+          <br />
+          <span><i class="fas fa-network-wired"></i> Carros<br /></span>
+          <span><i class="fas fa-network-wired"></i> Eletrodomésticos<br /></span>
+          <span><i class="fas fa-network-wired"></i> Plantas<br /></span>
+        </p>
+        <p>Agora que podemos conectar objetos do cotidiano à Internet
+          por meio de dispositivos incorporados, é possível uma
+          comunicação perfeita entre pessoas, processos e outras coisas.
+          Por meio da computação de baixo custo, nuvem, big data, análise
+          avançada e tecnologias móveis, coisas físicas podem compartilhar
+          e coletar dados com o mínimo de intervenção humana.
+          Nesse mundo hiperconectado, os sistemas digitais podem gravar,
+          monitorar e ajustar cada interação entre itens conectados. O mundo
+          físico encontra o mundo digital, e eles trabalham em conjunto.
+        </p>
+      </div><!--conteudo-sobre-->
+    </div>
+
+    </div>
+    <div class="info" id="infos">
+      <h2 class="alvos">Os Principais Alvos da IoT
+      </h2>
+    </div>
+    <section class="dados">
+      <div class="center">
+
+        <div class="dado-single">
+          <h2><span id="aparelhosInteligentes">0</span>%</h2>
+          <p>Aparelhos Inteligentes</p>
+        </div>
+        <div class="dado-single">
+          <h2><span id="medidoreEnergia">0</span>%</h2>
+          <p>Medidores de Energia Inteligente</p>
+        </div>
+        <div class="dado-single">
+          <h2><span id="dispositivosVestiveis">0</span>%</h2>
+          <p>Dispositivos Vestíveis</p>
+        </div>
+        <div class="dado-single">
+          <h2><span id="dispositivosSaude">0</span>%</h2>
+          <p>Dispositivos de Saúde</p>
+        </div>
+      </div>
+    </section><!--sobre-->
+
+  </section>
+  <section class="video" id="recomendacoes">
+    <h2 class="videos">Vídeos sobre IoT</h2>
+    <div class="container-slider">
+      <button id="prev-button"><img src="arrow.png" alt="prev-button"></button>
+      <div class="container-images">
+        <iframe class="slider on" src="https://www.youtube.com/embed/qNHydTYkfcg?si=V4okHVk1Szv_gAKC"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+
+        <iframe class="slider" src="https://www.youtube.com/embed/kl2gdbmk9Xw?si=eZAQI0ts-AKcW-Jv"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <button id="next-button"><img src="arrow.png" alt="next-button"></button>
+  </section>
+
+  <section class="forum" id="forum">
+    <div class="forumLogin" id="forumLogin">
+      <h2 style="color:#774CF1 ;">Faça login para ter acesso ao fórum</h2>
+
+      <div onclick="abrirModal()" id="login_button_modal" class="btn big">
+        Login
+      </div>
+    </div>
+
+    <div class="newPost" id="newPost">
+      <div class="infoUser">
+        <div class="imgUser">
+          <img id="imgUser" src="/user.svg" />
+        </div>
+        <strong id="userName">Otávio Alencar</strong>
+      </div>
+
+      <form action="" class="formPost" id="formPost">
+        <textarea id="publishText" name="textarea" placeholder="Poste aqui seu projeto em IoT" id="textarea"></textarea>
+        <p id="errorMessage"></p>
+
+        <div class="iconsAndButton">
+          <div class="icons">
+
+            <div id="upload-btn-wrapper" style="cursor: pointer;">
+              <span id="fileNameSelected">Nenhum arquivo selecionado</span>
+
+              <button class="btnFileForm">
+                <img src="img.svg" alt="Adicionar uma imagem">
+              </button>
+
+              <input type="file" name="publishImg" id="publishImg" accept="image/png, image/gif, image/jpeg" />
+            </div>
+          </div>
+
+          <button type="button" id="publicarBtn" class="btnSubmitForm">Publicar</button>
+        </div>
+      </form>
+
+      <div class="divider"></div>
+
+      <div id="postsContainer">
+      </div>
+
+      <button class="btn load-more">Carregar Mais</button>
+    </div>
+
+  </section>
+  <footer class="rodape">
+    <div class="wavesWrapper">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(119,76,241,0.7" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(119,76,241,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(119,76,241,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#774CF1" />
+        </g>
+      </svg>
+  </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/countUp.js"></script>
+  <script type="module" src="js/firebase.js"></script>
+
+</body>
+
+</html>
